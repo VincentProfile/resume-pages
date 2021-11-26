@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/resume-pages/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/resume-pages/static/js/main.dfd739b0.chunk.js",
-    "main.js.map": "/resume-pages/static/js/main.dfd739b0.chunk.js.map",
-    "runtime-main.js": "/resume-pages/static/js/runtime-main.e5db7ea9.js",
-    "runtime-main.js.map": "/resume-pages/static/js/runtime-main.e5db7ea9.js.map",
-    "static/css/2.e6c1e8c5.chunk.css": "/resume-pages/static/css/2.e6c1e8c5.chunk.css",
-    "static/js/2.fc8027b8.chunk.js": "/resume-pages/static/js/2.fc8027b8.chunk.js",
-    "static/js/2.fc8027b8.chunk.js.map": "/resume-pages/static/js/2.fc8027b8.chunk.js.map",
-    "static/js/3.7eeebbae.chunk.js": "/resume-pages/static/js/3.7eeebbae.chunk.js",
-    "static/js/3.7eeebbae.chunk.js.map": "/resume-pages/static/js/3.7eeebbae.chunk.js.map",
+    "main.js": "/resume-pages/static/js/main.1d37ba04.chunk.js",
+    "main.js.map": "/resume-pages/static/js/main.1d37ba04.chunk.js.map",
+    "runtime-main.js": "/resume-pages/static/js/runtime-main.1094b7a4.js",
+    "runtime-main.js.map": "/resume-pages/static/js/runtime-main.1094b7a4.js.map",
+    "static/css/2.4659568d.chunk.css": "/resume-pages/static/css/2.4659568d.chunk.css",
+    "static/js/2.80072544.chunk.js": "/resume-pages/static/js/2.80072544.chunk.js",
+    "static/js/2.80072544.chunk.js.map": "/resume-pages/static/js/2.80072544.chunk.js.map",
+    "static/js/3.abf41b25.chunk.js": "/resume-pages/static/js/3.abf41b25.chunk.js",
+    "static/js/3.abf41b25.chunk.js.map": "/resume-pages/static/js/3.abf41b25.chunk.js.map",
     "index.html": "/resume-pages/index.html",
-    "static/css/2.e6c1e8c5.chunk.css.map": "/resume-pages/static/css/2.e6c1e8c5.chunk.css.map",
+    "static/css/2.4659568d.chunk.css.map": "/resume-pages/static/css/2.4659568d.chunk.css.map",
     "static/css/main.8c8b27cf.chunk.css.map": "/resume-pages/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.fc8027b8.chunk.js.LICENSE.txt": "/resume-pages/static/js/2.fc8027b8.chunk.js.LICENSE.txt",
+    "static/js/2.80072544.chunk.js.LICENSE.txt": "/resume-pages/static/js/2.80072544.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/resume-pages/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e5db7ea9.js",
-    "static/css/2.e6c1e8c5.chunk.css",
-    "static/js/2.fc8027b8.chunk.js",
+    "static/js/runtime-main.1094b7a4.js",
+    "static/css/2.4659568d.chunk.css",
+    "static/js/2.80072544.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.dfd739b0.chunk.js"
+    "static/js/main.1d37ba04.chunk.js"
   ]
 }
