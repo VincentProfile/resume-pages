@@ -38,28 +38,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-// const googleProvider = new app.auth.GoogleAuthProvider();
-// const signInWithGoogle = async () => {
-//   try {
-//     const res = await auth.signInWithPopup(googleProvider);
-//     const user = res.user;
-//     const query = await db
-//       .collection("users")
-//       .where("uid", "==", user.uid)
-//       .get();
-//     if (query.docs.length === 0) {
-//       await db.collection("users").add({
-//         uid: user.uid,
-//         name: user.displayName,
-//         authProvider: "google",
-//         email: user.email,
-//       });
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     alert(err.message);
-//   }
-// };
+const googleProvider = new app.auth.GoogleAuthProvider();
+const signInWithGoogle = async () => {
+  try {
+    const res = await auth.signInWithPopup(googleProvider);
+    const user = res.user;
+    const query = await db
+      .collection("users")
+      .where("uid", "==", user.uid)
+      .get();
+    if (query.docs.length === 0) {
+      await db.collection("users").add({
+        uid: user.uid,
+        name: user.displayName,
+        authProvider: "google",
+        email: user.email,
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  }
+};
 const signInWithEmailAndPassword = async (email, password) => {
   try {
     await auth.signInWithEmailAndPassword(email, password);
@@ -98,7 +98,7 @@ const logout = () => {
 export {
   auth,
   db,
-  //signInWithGoogle,
+  signInWithGoogle,
   signInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordResetEmail,

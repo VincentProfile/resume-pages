@@ -10,13 +10,13 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, loading, error] = useAuthState(auth);
-    const history = useNavigate();
+    const navigate = useNavigate();
     useEffect(() => {
         if (loading) {
             // maybe trigger a loading screen
             return;
         }
-        // if (user) history.replace("/");
+        if (user) navigate("/");
     }, [user, loading]);
     return (
 
@@ -42,9 +42,9 @@ function Login() {
                 >
                     Login
                 </button>
-                {/* <button className="login__btn login__google" onClick={signInWithGoogle}>
+                <button className="login__btn login__google" onClick={signInWithGoogle}>
                     Login with Google
-                </button> */}
+                </button>
                 <div>
                     <Link to="/reset">Forgot Password</Link>
                 </div>
