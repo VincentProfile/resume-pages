@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
-import About from './About';
-import Home from './home';
-import Login from './Login';
+import { Link } from "react-router-dom";
 
 import 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import Register from './Register';
 
 class NavigationBar extends React.Component {
     render() {

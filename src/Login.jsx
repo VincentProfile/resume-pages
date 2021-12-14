@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, signInWithEmailAndPassword, signInWithGoogle } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
-import Register from "./Register";
 
 function Login() {
 
@@ -17,7 +16,7 @@ function Login() {
             return;
         }
         if (user) navigate("/");
-    }, [user, loading]);
+    }, [user, loading, navigate]);
     return (
 
         <div className="login">

@@ -1,28 +1,29 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Navigate, useNavigate } from "react-router";
-import { auth, db, logout } from "./firebase";
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router";
+import { auth, db } from "./firebase";
 
 function Home() {
     const navigate = useNavigate();
+
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState("");
-    const fetchUserName = async () => {
-        try {
-            const query = await db
-                .collection("users")
-                .where("uid", "==", user?.uid)
-                .get();
-            const data = await query.docs[0].data();
-            setName(data.name);
-        } catch (err) {
-            console.error(err);
-            alert("An error occured while fetching user data");
-        }
-    };
+    
     useEffect(() => {
+        const fetchUserName = async () => {
+            try {
+                const query = await db
+                    .collection("users")
+                    .where("uid", "==", user?.uid)
+                    .get();
+                const data = await query.docs[0].data();
+                setName(data.name);
+            } catch (err) {
+                console.error(err);
+                alert("An error occured while fetching user data");
+            }
+        };
         if (loading) return;
         if (user){
             return (
@@ -88,7 +89,7 @@ function Home() {
         );
         }else navigate('/login');
         fetchUserName();
-    }, [user, loading]);
+    }, [user, loading, navigate]);
 
 
 }
