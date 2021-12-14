@@ -24,70 +24,69 @@ function Home() {
     };
     useEffect(() => {
         if (loading) return;
-        if (!user) navigate('/login');
-        else {
+        if (user){
             return (
+            <div>
+                <div>
+                    <h2>
+                        Strengths Summary & Career Objective
+                    </h2>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            A resilient individual who is detailed oriented and an independent learner
+                        </li>
+                        <li>
+                            Seeking opportunities in software development; web, mobile, application development
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>
+                        Education
+                    </h2>
+                </div>
                 <div>
                     <div>
-                        <h2>
-                            Strengths Summary & Career Objective
-                        </h2>
+                        <div>
+                            <h6>
+                                Nanyang Technological University, Singapore
+                            </h6>
+                            <p>
+                                Aug 2016 - Dec 2019
+                            </p>
+                        </div>
                     </div>
                     <div>
                         <ul>
                             <li>
-                                A resilient individual who is detailed oriented and an independent learner
-                            </li>
-                            <li>
-                                Seeking opportunities in software development; web, mobile, application development
+                                Bachelor of Mechanical Engineering with Specialisation in Systems Engineering
                             </li>
                         </ul>
                     </div>
+
                     <div>
-                        <h2>
-                            Education
-                        </h2>
+                        <div>
+                            <h6>
+                                Singapore Polytechnic
+                            </h6>
+                            <p>
+                                Apr 2011 - Apr 2014
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <div>
-                            <div>
-                                <h6>
-                                    Nanyang Technological University, Singapore
-                                </h6>
-                                <p>
-                                    Aug 2016 - Dec 2019
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>
-                                    Bachelor of Mechanical Engineering with Specialisation in Systems Engineering
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <div>
-                                <h6>
-                                    Singapore Polytechnic
-                                </h6>
-                                <p>
-                                    Apr 2011 - Apr 2014
-                                </p>
-                            </div>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>
-                                    Diploma in Marine Engineering
-                                </li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li>
+                                Diploma in Marine Engineering
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            );
-        }
+            </div>
+        );
+        }else navigate('/login');
         fetchUserName();
     }, [user, loading]);
 
