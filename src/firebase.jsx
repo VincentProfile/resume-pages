@@ -20,21 +20,6 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_measurementId,
 };
 
-// Initialize Firebase
-// const firebaseApp = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(firebaseApp);
-// const auth = getAuth(firebaseApp);
-// // const db = getFirestore(firebaseApp);
-
-// // detect auth state 
-// onAuthStateChanged(auth, user => {
-//     if (user != null){
-//         console.log("Logged in!");
-//     }else{
-//         console.log("No User");
-//     }
-// })
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
